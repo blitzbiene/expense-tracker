@@ -3,7 +3,9 @@ import {combineReducers} from 'redux';
 
 
 const listReducer = (state=[],action)=>{
+    if(action.type==="ADD_EXPENSE" || action.type==="ADD_INCOME")
     return [...state,action.payload];
+    return state;
 
 }
 
